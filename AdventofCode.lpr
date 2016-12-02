@@ -1,9 +1,16 @@
 program AdventofCode;
 
-uses Day1;
+uses
+  DateUtils,
+  SysUtils,
+  Day1, Day2;
+
+var StartTime: TDateTime;
 
 begin
-  Day1.Run;
+  StartTime := Now;
+  Day2.Run;
+  writeln('Runtime ', MilliSecondsBetween(StartTime,Now), ' milliseconds.');
   readln;
 end.
 
